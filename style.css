@@ -1,0 +1,150 @@
+.wrapper {
+    background-image: url(./img/cloud.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* menu component */
+.menu ::before{
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+.menu label::before{ content: '\e5d2'; }
+.menu li:nth-child(1) a::before{ content: '\e88a'; }
+.menu li:nth-child(2) a::before{ content: '\e7fd'; }
+.menu li:nth-child(3) a::before{ content: '\e873'; }
+.menu li:nth-child(4) a::before{ content: '\e9ef'; }
+
+#expand-menu { /* 체크박스 폼 요소 감춤 */
+    display: none;
+}
+#expand-menu:checked ~ ul { /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+    display: block;
+    height: auto;
+}
+.menu {
+    display: block;
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* 반응형 애니메이션용 */
+    transition: all 0.5s ease; /* 반응형 애니메이션 */
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu a, .menu > label {
+    display: block;
+    height: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover {
+    color: #000;
+}
+.menu ul li:hover, .menu > label:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+}
+.menu div {
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 50px; /* 아이콘과 텍스트 사이 여백 */
+}
+@media screen and (max-width:1023px) {
+    .menu { /* 1단계 */
+        width: 60px;
+    }
+}
+@media screen and (max-width:560px) {
+    .menu #expand-menu:not(:checked) ~ ul { /* 2단계 */
+        display: none;
+    }
+}
+.menu div {
+    position: absolute; /* 절대 위치로 텍스트 고정 */
+    left: 50px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 20px; /* 패딩 20p로 축소 */
+}
+
+/* content style css */
+.content {
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.h_imgtxt {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.h_imgtxt1 {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  @media (max-width: 1023px) {
+    .h_imgtxt {
+        font-size: 100px;
+        color: #fff;
+        display: block;
+    }
+    .h_imgtxt1 {
+        font-size: 50px;
+        color: #fff;
+    }
+  }
+
+  @media (max-width:560px) {
+    .h_imgtxt {
+        font-size: 50px;
+        color: #f7f7ff;
+        display: block;
+    }
+    .h_imgtxt1 {
+        font-size: 30px;
+        color: #f7f7ff;
+    }
+  }
+  /* aboutme style css */
+  .aboutme {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    display: block;
+  }
+
+  .aboutme p {
+    text-align: center;
+    color: #fff;
+  }
+  /* description style css */
