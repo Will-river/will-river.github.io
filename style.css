@@ -1,5 +1,5 @@
 .wrapper {
-    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0)), url(./img/cloud.jpg);
+    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0)), url(./cloud.jpg);
     position: absolute;
     width: 100%;
     height: 100%;
